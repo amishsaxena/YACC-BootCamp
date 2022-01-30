@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/pause_gui.gd" type="Script" id=1]
+
+[node name="pause_gui" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -394.778
+margin_top = -189.552
+margin_right = 413.222
+margin_bottom = 218.448
+color = Color( 0.121569, 0.647059, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = -205.402
+margin_top = -45.8007
+margin_right = -2.40207
+margin_bottom = 14.1993
+rect_scale = Vector2( 2.0255, 1.70619 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
